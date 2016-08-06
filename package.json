@@ -1,0 +1,38 @@
+{
+  "name": "angular2-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carluccyo/angular2-logger.git"
+  },
+  "keywords": [
+    "angular2",
+    "service",
+    "logger"
+  ],
+  "author": "Carlo Di Maio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carluccyo/angular2-logger/issues"
+  },
+  "homepage": "https://github.com/carluccyo/angular2-logger#readme",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "zone.js": "^0.6.12",
+     "rxjs": "5.0.0-beta.6"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  }
+  
+}

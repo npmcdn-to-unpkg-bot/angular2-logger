@@ -4,7 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "tsc",
+    "typings": "typings",
+    "uglifyjs": "uglifyjs",
+    "tslint": "tslint *.ts src/**/*.ts",
+    "lint": "npm run tslint",
+    "minify": "uglifyjs -o bundles/angular2-logger.min.js bundles/angular2-logger.js",
+    "prepublish": "npm run build",
+    "clean": "rimraf *.js *.js.map *.d.ts app/**/*.js app/**/*.js.map app/**/*.d.ts dist bundles",
+    "precompile": "typings install",
+    "compile": "npm run compile:bundle && npm run compile:cjs && npm run compile:es6",
+    "compile:bundle": "tsc",
+    "compile:cjs": "tsc -t ES5 --sourceMap --experimentalDecorators --emitDecoratorMetadata --moduleResolution node --declaration core.ts typings/index",
+    "compile:es6": "tsc -t ES6 --sourceMap --experimentalDecorators --emitDecoratorMetadata --moduleResolution node core.ts --outDir dist/es6",
+    "pretest": "npm run lint",
+    "test": "echo tests pending...",
+    "prebuild": "npm run clean && npm run compile && npm run test",
+    "build": "npm run minify",
+    "postbuild": "echo Build Successful."
   },
   "repository": {
     "type": "git",
@@ -26,7 +43,9 @@
     "@angular/compiler": "2.0.0-rc.4",
     "@angular/core": "2.0.0-rc.4",
     "zone.js": "^0.6.12",
-     "rxjs": "5.0.0-beta.6"
+    "tslint": "^3.8.1",
+    "uglify-js": "^2.6.2",
+    "rxjs": "5.0.0-beta.6"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
@@ -34,5 +53,5 @@
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   }
-  
+
 }

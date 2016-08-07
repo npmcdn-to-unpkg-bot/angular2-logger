@@ -1,3 +1,10 @@
 .gitignore
-node_modules
-
+node_modules/
+typings/
+dist/
+core.d.ts
+core.js
+core.js.map
+*.js.map
+app/core/**/*.js
+app/core/**/*.d.ts

@@ -1,8 +1,8 @@
 {
   "name": "angular2-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "bundles/angular2-logger.min.js",
   "scripts": {
     "tsc": "tsc",
     "typings": "typings",
@@ -39,9 +39,9 @@
   },
   "homepage": "https://github.com/carluccyo/angular2-logger#readme",
   "dependencies": {
-    "@angular/common": "2.0.0-rc.4",
-    "@angular/compiler": "2.0.0-rc.4",
-    "@angular/core": "2.0.0-rc.4",
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/core": "2.0.0-rc.5",
     "zone.js": "^0.6.12",
     "tslint": "^3.8.1",
     "uglify-js": "^2.6.2",
